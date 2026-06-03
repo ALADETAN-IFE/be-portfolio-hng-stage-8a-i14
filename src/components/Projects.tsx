@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import { ExternalLink } from "lucide-react";
 import { useProjects } from "@/hooks/getProjectHook";
-import type { Project } from "@/app/api/routes";
+import { Project } from "@/app/api/projects/route";
 
 function GithubIcon() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import type { Project } from "@app/api/routes";
+import type { Project } from "@/app/api/projects/route";
 
 export function useProjects() {
   const [projects, setProjects] = useState<Project[]>([]);
