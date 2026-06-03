@@ -30,7 +30,7 @@ export default function Profile() {
 
           <p className="text-lg md:text-xl text-(--muted) max-w-2xl leading-relaxed mt-6 mb-8">
             Backend engineer building production APIs with Node.js, Express,
-            FastAPI PostgreSQL, and MongoDB. During HNG i14, I shipped REST
+            FastAPI PostgreSQL, and MongoDB. During HNG, I shipped REST
             services, external API integrations, AI agent backends, and data
             pipelines — all tested, documented, and deployed. But this portfolio
             is for I14 so I&apos;d focus on that
