@@ -2,10 +2,101 @@
 
 :root {
   --background: #0D1117;
+  --surface: #161B22;
+  --surface-2: #21262D;
+  --border: #30363D;
+  --accent: #58A6FF;
+  --accent-2: #3FB950;
+  --accent-3: #D2A8FF;
+  --muted: #8B949E;
+  --text: #E6EDF3;
+  --text-dim: #C9D1D9;
 }
 
 body {
   background: var(--background);
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--background); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+
+::selection { background: rgba(88, 166, 255, 0.2); color: var(--text); }
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(48, 54, 61, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(48, 54, 61, 0.4) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+
+.glow-blue { box-shadow: 0 0 20px rgba(88, 166, 255, 0.15); }
+.glow-green { box-shadow: 0 0 20px rgba(63, 185, 80, 0.15); }
+
+
+.font-mono-custom { font-family: var(--font-geist-mono), monospace; }
+
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  background: rgba(88, 166, 255, 0.1);
+  color: var(--accent);
+  border: 1px solid rgba(88, 166, 255, 0.2);
+}
+
+.tag-green {
+  background: rgba(63, 185, 80, 0.1);
+  color: var(--accent-2);
+  border-color: rgba(63, 185, 80, 0.2);
+}
+
+.tag-purple {
+  background: rgba(210, 168, 255, 0.1);
+  color: var(--accent-3);
+  border-color: rgba(210, 168, 255, 0.2);
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+.animated-link {
+  position: relative;
+  text-decoration: none;
+}
+.animated-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.animated-link:hover::after { width: 100%; }
+
+.card-hover {
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(88, 166, 255, 0.1);
 }
