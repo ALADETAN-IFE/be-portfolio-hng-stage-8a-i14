@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import { useProjects } from "@/hooks/getProjectHook";
-import type { Project } from "@/app/api/routes";
+import type { Project } from "@/app/api/projects/route";
 
 // Score projects — pick the most technically rich backend one
 function scoreProject(p: Project): number {
