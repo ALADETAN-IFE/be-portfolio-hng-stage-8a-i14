@@ -1,0 +1,21 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "main",
+    "origin",
+    "repoguard/fixes-1785412048630",
+    "repoguard/fixes-1791542623995"
+  ],
+  "parent": {
+    "main": null,
+    "origin": "main",
+    "repoguard/fixes-1785412048630": "main",
+    "repoguard/fixes-1791542623995": "main"
+  },
+  "order": [
+    "main",
+    "origin",
+    "repoguard/fixes-1785412048630",
+    "repoguard/fixes-1791542623995"
+  ]
+}
